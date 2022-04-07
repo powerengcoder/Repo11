@@ -13,7 +13,7 @@ for( var i=0; i<5; i++)
      for(var j=0; j< 4; j++){
          sum += temps[i][j];
      }
-     averageDayTemp[i] = sum/4;
+     averageDayTemp.push(sum/4);
  }
 return averageDayTemp;
 }
