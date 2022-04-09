@@ -1,17 +1,12 @@
 var myStr = "Paragon is the best!";
-function useMethods(str){
 
-    var mySplit = str.split("");
-    //var myRev = mySplit.reverse();
-    //var myReverse = myRev.join('');
+function useMethods(str) {
+    
+  var myReverse = str.split("").reverse().join("");
+  var countCharacters = myReverse.split(" ").map((x) => x.length);
 
-    //var countCharacters =0;
-
-    return mySplit;//{mySplit,myRev, myReverse, countCharacters};
+  return { myReverse, countCharacters };
 }
 
-
-
 console.log(useMethods(myStr));
-
 module.exports = useMethods;
