@@ -1,12 +1,27 @@
 function myMutation(arr){
-var first = arr[0].toLowerCase();
+var first = arr[0];
 var second = arr[1];
+var firstSplitted = first.split();
+var secondSplitted = second.split();
 
 for (var i=0; i<second.length; i++){
-    
-    if(first.includes(second[i])){
+    var counter =0;
+    for(var i=0; i<first.length; i++){
+        for(var j=0; j<second.length; j++){
+            if(firstSplitted[i] == secondSplitted[j]){
+                counter++;
+            } else {
+                break;
+            }
+            
+        }
+    }
+
+    if(counter == second.length){
         return true;
-    } return false;
+    }else{
+        return false;
+    }
 }
 
 }
